@@ -6,8 +6,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="shortcut icon" href="https://res.cloudinary.com/ddtzx1ohw/image/upload/v1679479926/Ajapro/E-commerce/e-store-web-logo-main_edbtj2.png">
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="./src/styles.css" />
     <script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -17,7 +18,9 @@
                 <img src="https://res.cloudinary.com/ddtzx1ohw/image/upload/v1679478523/Ajapro/E-commerce/e-store-logo-main_dprydv.png"
                     class="E-store-logo" />
             </a>
-            <a class="navbar-brand site-name-heading" href="#">E-Store</a>
+            <a href="index.html">
+                <h1 class="navbar-brand site-name-heading" href="#">E-Store</h1>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -36,6 +39,12 @@
                     </li>
                 </ul>
                 <!-- Button trigger modal -->
+                <a href="cart.html">
+                    <div class="cart">
+                        <i class="bi bi-cart2"></i>
+                        <div id="cartQuantity" class="cartAmount">0</div>
+                      </div>
+                </a>
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                     data-bs-target="#staticBackdrop">
                     Login
@@ -84,153 +93,9 @@
     </div>
     <div class="explore-menu-section pt-5 pb-5" id="exploreMenuSection">
         <div class="container">
-            <div class="row">
+            <div class="row" id="explore-menu-section-items">
                 <div class="col-12">
                     <h1 class="menu-section-heading">Explore Menu</h1>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="shadow-lg menu-item-card p-3 mb-3">
-                        <img src="https://res.cloudinary.com/ddtzx1ohw/image/upload/v1679494198/Ajapro/E-commerce/Products/HP-Laptop_enfu8i.jpg"
-                            class="menu-item-image w-100" />
-                        <h1 class="product-card-title">HP 15s Intel Core i5 12th Gen-(8GB/512GB SSD/Windows 11 Home) With MS Office
-                        </h1>
-                        <div class="d-flex flex-row justify-content-between">
-                            <h1 class="item-price"> ₹59,990</h1>
-                            <button class="cart-button">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="shadow-lg menu-item-card p-3 mb-3">
-                        <img src="https://res.cloudinary.com/ddtzx1ohw/image/upload/v1679494197/Ajapro/E-commerce/Products/Acer_Nitro_Monitor_piz02n_xsc5jc.jpg"
-                            class="menu-item-image w-100" />
-                        <h1 class="product-card-title">Acer Nitro 23.8 inch Full HD LED Backlit IPS Panel Gaming Monitor (VG240Y)  
-                        </h1>
-                        <div class="d-flex flex-row justify-content-between">
-                            <h1 class="item-price"> ₹9,600</h1>
-                            <button class="cart-button">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="shadow-lg menu-item-card p-3 mb-3">
-                        <img src="https://res.cloudinary.com/ddtzx1ohw/image/upload/v1679494197/Ajapro/E-commerce/Products/Asus_VivoBook_pzbfon.jpg"
-                            class="menu-item-image w-100" />
-                        <h1 class="product-card-title">ASUS VivoBook K15 OLED (2022) Ryzen 5 (8 GB/1 TB HDD/256 GB SSD/Windows 11 Home)
-                        </h1>
-                        <div class="d-flex flex-row justify-content-between">
-                            <h1 class="item-price"> ₹48,990</h1>
-                            <button class="cart-button">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="shadow-lg menu-item-card p-3 mb-3">
-                        <img src="https://res.cloudinary.com/ddtzx1ohw/image/upload/v1679494198/Ajapro/E-commerce/Products/Sony_Camera_jakj4s.jpg"
-                            class="menu-item-image w-100" />
-                        <h1 class="product-card-title">SONY Alpha ILCE-7SM3 Full Frame Mirrorless Camera Body and 4K movie recording
-                        </h1>
-                        <div class="d-flex flex-row justify-content-between">
-                            <h1 class="item-price"> ₹62,399</h1>
-                            <button class="cart-button">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="shadow-lg menu-item-card p-3 mb-3">
-                        <img src="https://res.cloudinary.com/ddtzx1ohw/image/upload/v1679494198/Ajapro/E-commerce/Products/LG-Smart-TV_uppodi.jpg"
-                            class="menu-item-image w-100" />
-                        <h1 class="product-card-title">LG 80 cm (32 inch) HD Ready LED Smart WebOS TV  with 50 Hz Refresh Rate
-                        </h1>
-                        <div class="d-flex flex-row justify-content-between">
-                            <h1 class="item-price"> ₹13,990</h1>
-                            <button class="cart-button">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="shadow-lg menu-item-card p-3 mb-3">
-                        <img src="https://res.cloudinary.com/ddtzx1ohw/image/upload/v1679494197/Ajapro/E-commerce/Products/Agaro-Vaccum_cleaner_pkevsd.jpg"
-                            class="menu-item-image w-100" />
-                        <h1 class="product-card-title">AGARO Regal Hand-held Vacuum Cleaner  (Black) Robust Body with Crevice Nozzle
-                        </h1>
-                        <div class="d-flex flex-row justify-content-between">
-                            <h1 class="item-price"> ₹1,599</h1>
-                            <button class="cart-button">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="shadow-lg menu-item-card p-3 mb-3">
-                        <img src="https://res.cloudinary.com/ddtzx1ohw/image/upload/v1679494197/Ajapro/E-commerce/Products/Breethasol-Tv_gnhrgd.jpg"
-                            class="menu-item-image w-100" />
-                        <h1 class="product-card-title">BeethoSOL 80 cm (32 inch) HD Ready LED Smart Android TV  (LEDSTVBG3285HD27-EK)
-                        </h1>
-                        <div class="d-flex flex-row justify-content-between">
-                            <h1 class="item-price"> ₹7,699</h1>
-                            <button class="cart-button">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="shadow-lg menu-item-card p-3 mb-3">
-                        <img src="https://res.cloudinary.com/ddtzx1ohw/image/upload/v1679494197/Ajapro/E-commerce/Products/Alexa-Echo_rolt7a.jpg"
-                            class="menu-item-image w-100" />
-                        <h1 class="product-card-title">Echo Dot (4th Gen, 2023 release) Smart speaker with Bigger sound, Motion Detection,Black color
-                         </h1>
-                        <div class="d-flex flex-row justify-content-between">
-                            <h1 class="item-price"> ₹3,299</h1>
-                            <button class="cart-button">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="shadow-lg menu-item-card p-3 mb-3">
-                        <img src="https://res.cloudinary.com/ddtzx1ohw/image/upload/v1679494198/Ajapro/E-commerce/Products/Zebronics_Gaming_Keyboard_zurclt.jpg"
-                            class="menu-item-image w-100" />
-                        <h1 class="product-card-title">Zebronics Zeb-Transformer Gaming Keyboard and Mouse Combo (USB, Braided Cable)
-                        </h1>
-                        <div class="d-flex flex-row justify-content-between">
-                            <h1 class="item-price"> ₹1,199</h1>
-                            <button class="cart-button">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="shadow-lg menu-item-card p-3 mb-3">
-                        <img src="https://res.cloudinary.com/ddtzx1ohw/image/upload/v1679494197/Ajapro/E-commerce/Products/Boult_Earbuds_gfz1x4.jpg"
-                            class="menu-item-image w-100" />
-                        <h1 class="product-card-title">Boult Audio Z40 TWS Earbuds with 60H Playtime,Low Latency Gaming,IPX5, Bluetooth 5.1 
-                        </h1>
-                        <div class="d-flex flex-row justify-content-between">
-                            <h1 class="item-price"> ₹1,498</h1>
-                            <button class="cart-button">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="shadow-lg menu-item-card p-3 mb-3">
-                        <img src="https://res.cloudinary.com/ddtzx1ohw/image/upload/v1679494198/Ajapro/E-commerce/Products/Nova_iron_box_fmu1pe.jpg"
-                            class="menu-item-image w-100" />
-                        <h1 class="product-card-title">Nova Plus Amaze NI 10 1100 W Dry Iron (Grey & Turquoise) ,Non Stick Du point,Heritage Coating
-                        </h1>
-                        <div class="d-flex flex-row justify-content-between">
-                            <h1 class="item-price"> ₹494</h1>
-                            <button class="cart-button">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="shadow-lg menu-item-card p-3 mb-3">
-                        <img src="https://res.cloudinary.com/ddtzx1ohw/image/upload/v1679494963/Ajapro/E-commerce/Products/Egate_Projector_eafeoh.jpg"
-                            class="menu-item-image w-100" />
-                        <h1 class="product-card-title">Egate K9 Pro-Max Android 9.0 Projector for Home 4k, Full HD 1080p  6600 Lumens LED
-                        </h1>
-                        <div class="d-flex flex-row justify-content-between">
-                            <h1 class="item-price"> ₹15,980</h1>
-                            <button class="cart-button">Add to Cart</button>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -306,7 +171,8 @@
             </div>
         </div>
     </div>
-    <script src="./script.js"></script>
+    <script src="./src/productData.js"></script>
+    <script src="./src/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
   </script>

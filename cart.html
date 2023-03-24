@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>E-Store</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./src/styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://res.cloudinary.com/ddtzx1ohw/image/upload/v1679478523/Ajapro/E-commerce/e-store-logo-main_dprydv.png"
+                    class="E-store-logo" />
+            </a>
+            <a href="index.html">
+                <h1 class="navbar-brand site-name-heading" href="#">E-Store</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#exploreMenuSection" id="navItem2">Explore Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#deliveryPaymentSection" id="navItem3">Delivery & Payment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#followUsSection" id="navItem4">Follow Us</a>
+                    </li>
+                </ul>
+                <!-- Button trigger modal -->
+                <a href="cart.html">
+                    <div class="cart">
+                        <i class="bi bi-cart2"></i>
+                        <div id="cartQuantity" class="cartAmount">0</div>
+                      </div>
+                </a>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop">
+                    Login
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Login</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img  src="https://res.cloudinary.com/ddtzx1ohw/image/upload/v1679391058/Ajapro/E-commerce/other%20sections/User-logo_zwej5z.jpg" class="user-logo img-responsive center-block" />
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="email-id" class="col-form-label">E-mail</label>
+                                        <input type="email" class="form-control" id="email-id">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="password" class="col-form-label">Password</label>
+                                        <input type="password" class="form-control" id="password">
+                                    </div>
+                                    <div class="text-center mt-3">
+                                        <button class="btn btn-primary">Login</button>
+                                        <a href="#" class="nav-link mt-3">Already have an account ?</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="d-flex flex-row justify-content-around">
+        <div class="shopping-cart" id="shopping-cart"></div>
+        <div id="label" class="text-center cart-total-container"></div>
+    </div>
+</body>
+<script src="./src/productData.js"></script>
+<script src="./src/cart.js"></script>
+</html>

@@ -25,22 +25,43 @@
     font-family: "Roboto";
 }
 
-.user-logo{
+.user-logo {
     width: 100px;
     height: 90px;
     margin-left: 180px;
 }
 
-.site-name-heading{
+.site-name-heading {
     color: black;
     font-family: "Roboto";
+}
+
+.cart {
+    position: relative;
+    background-color: #a3cf1e;
+    color: #212529;
+    font-size: 30px;
+    padding: 5px;
+    border-radius: 4px;
+    margin-right: 12px;
+}
+
+.cartAmount {
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    font-size: 16px;
+    background-color: #0d6efd;
+    color: white;
+    padding: 3px;
+    border-radius: 3px;
 }
 
 .banner-section-bg-container {
     background-image: url("https://res.cloudinary.com/ddtzx1ohw/image/upload/v1679483272/Ajapro/E-commerce/b9382ff17e_dbpdmo.jpg");
     height: 100vh;
     background-size: cover;
-    
+
 }
 
 .banner-heading {
@@ -58,20 +79,35 @@
 }
 
 .product-card-title {
-  color: #323f4b;
-  font-family: "Roboto";
-  font-size: 18px;
-  font-weight: 500;
-  margin-top: 24px;
+    color: #323f4b;
+    font-family: "Roboto";
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 24px;
 }
 
+i {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
 
 .item-price {
-  font-family: "Roboto";
-  font-size: 24px;
+    font-family: "Roboto";
+    font-size: 24px;
 }
 
-.cart-button{
+.add-cart-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    font-size: 16px;
+}
+
+.cart-button {
     color: white;
     background-color: #24a0ed;
     border-radius: 8px;
@@ -232,3 +268,100 @@
     font-family: "Roboto";
     font-size: 14px;
 }
+
+
+
+/* remaining styles  */
+
+.shopping-cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+.cart-product-image{
+    width: 160px;
+    height: 120px;
+    border-radius: 2px;
+    margin: 24px;
+
+}
+
+.cart-product-details-container{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/**
+  * ! style rules for cart-item
+  **/
+
+.cart-item-container {
+    border: 2px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+    height: 160px;
+    margin: 20px;
+}
+
+.bi-plus-lg{
+    color: green;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 4px;
+}
+
+.bi-dash-lg{
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 4px;
+}
+
+.quantity{
+    color:black;
+    font-size: 20px;
+    margin: 4px;   
+}
+
+.cart-product-name{
+    font-family: "Roboto";
+    font-weight: 100;
+    color: black;
+    margin-top: 20px;
+}
+
+.cart-item-price {
+    color: black;
+    font-family: "Roboto";
+    font-weight: bold;
+}
+
+.bi-x-lg{
+    color: red;
+    font-size: 18px;
+    margin: 8px;
+}
+
+.cart-total-container{
+    background-color: white;
+    width: 400px;
+    height: 200px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 8px;
+    
+}
+
+.bi-check-circle{
+    background-color: green;
+    color: white;
+    font-size: 18px;
+}
+
