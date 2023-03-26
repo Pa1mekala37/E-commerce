@@ -38,7 +38,7 @@
 
 .cart {
     position: relative;
-    background-color: #a3cf1e;
+    background-color: #24a0ed;
     color: #212529;
     font-size: 30px;
     padding: 5px;
@@ -51,7 +51,7 @@
     top: -15px;
     right: -10px;
     font-size: 16px;
-    background-color: #0d6efd;
+    background-color: red;
     color: white;
     padding: 3px;
     border-radius: 3px;
@@ -270,9 +270,6 @@ a {
 }
 
 
-
-/* remaining styles  */
-
 .shopping-cart {
     display: flex;
     flex-direction: column;
@@ -280,6 +277,7 @@ a {
     align-items: center;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 12px;
 }
 
 
@@ -297,17 +295,14 @@ a {
     
 }
 
-/**
-  * ! style rules for cart-item
-  **/
 
 .cart-item-container {
     border: 2px solid black;
     border-radius: 5px;
     display: flex;
     flex-direction: row;
-    width: 800px;
-    height: 160px;
+    width: auto;
+    height: auto;
     margin: 20px;
 }
 
@@ -352,16 +347,25 @@ a {
 
 .cart-total-container{
     background-color: white;
-    width: 400px;
-    height: 200px;
+    min-width: 310px;
+    height: 350px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 8px;
-    
+    margin: 36px;
 }
 
-.bi-check-circle{
-    background-color: green;
-    color: white;
-    font-size: 18px;
+
+.cart-summary-heading{
+    font-family: "Roboto";
+    margin-top: 8px;
 }
 
+.order-eligibility{
+    font-family: "Roboto";
+    font-weight: 200;
+}
+
+.cart-amount{
+    font-family: "Roboto";
+    font-weight: bold;
+}

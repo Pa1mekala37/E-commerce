@@ -18,33 +18,37 @@ let generateCartItems = () => {
       let { img, price, productName } = search;
       return `
       <div>
-        <div class="cart-item-container">
-          <div>
-            <img class="cart-product-image" src=${img} alt="product-${id}" />
+          <div class="cart-item-container">
+            <div>
+              <img class="cart-product-image" src=${img} alt="product-${id}" />
+            </div>
+            <div class="cart-product-details-container">
+                <div class="d-flex flex-row">
+                  <h5 class="cart-product-name">${productName}</h5>
+                  <i onclick="removeItem(${id})" class="bi bi-x-lg"></i>
+                </div>
+                <p class="cart-item-price">Price : ₹ ${price}</p>
+                <div class="d-flex flex-row align-item-center">
+                    <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
+                    <div id=${id} class="quantity">${item}</div>
+                    <i onclick="increment(${id})" class="bi bi-plus-lg"></i>
+                </div>
+            </div>
           </div>
-          <div class="cart-product-details-container">
-              <div class="d-flex flex-row">
-                <h5 class="cart-product-name">${productName}</h5>
-                <i onclick="removeItem(${id})" class="bi bi-x-lg"></i>
-              </div>
-              <p class="cart-item-price">Price : ₹ ${price}</p>
-              <div class="d-flex flex-row align-item-center">
-                  <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
-                  <div id=${id} class="quantity">${item}</div>
-                  <i onclick="increment(${id})" class="bi bi-plus-lg"></i>
-              </div>
-          </div>
-        </div>
       </div>`
     }).join(""))
   }
   else {
     ShoppingCart.innerHTML = ``
     label.innerHTML = `
-        <h2>Cart is Empty</h2>
-        <a href="index.html"> 
-            <button class="btn btn-secondary">Back to Home Page</button>
-        </a>`
+        <div class="container">
+          <div class="d-flex flex-column">
+          <h2>Cart is Empty</h2>
+          <a href="index.html"> 
+              <button class="btn btn-secondary">Back to Home Page</button>
+          </a>
+          </div>
+        </div>`
   }
 };
 
@@ -118,12 +122,26 @@ let TotalAmount = () => {
     }).reduce((x, y) => x + y, 0);
 
     return (label.innerHTML = `
-      <div>
-        <p> <i class="bi bi-check-circle"></i> Your order is eligible for FREE Delivery.</p>
-        <h2>Total Cart Value : ₹ ${amount}</h2>
+      <div class="text-center cart-total-container">
+        <h2 class="cart-summary-heading">Cart Summary</h2>
+        <hr>
+        <p class="m-2 p-auto order-eligibility"> <i class="bi bi-check-circle"></i> Your order is eligible for FREE Delivery.</p>
+        <div class="d-flex justify-content-between p-2">
+          <a>Cart Value</a>
+          <a> ₹ ${amount}.00/-</a>
+        </div>
+        <div class="d-flex justify-content-between p-2">
+          <a>Handling Charges</a>
+          <a> ₹ 99.00/-</a>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between p-2 ">
+          <p class="cart-amount">Total</p>
+          <p class="cart-amount"> ₹ ${amount+99}.00/-</p>
+        </div>
         <div>
-          <button class="btn btn-primary">Proceed to Buy</button>
-          <button onclick="clearCart()" class="btn btn-danger" >Clear Cart</button>
+          <button class="btn btn-primary mt-3">Proceed to Buy</button>
+          <button onclick="clearCart()" class="btn btn-danger mt-3" >Clear Cart</button>
         </div>
         
       </div>
