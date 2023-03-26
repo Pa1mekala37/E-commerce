@@ -8,20 +8,20 @@ let generateShop = () => {
             let { id, productName, img, price } = x;
             let search = mybasket.find((x) => x.id === id) || []
             return `
-    <div id=product-id-${id} class="col-12 col-md-6 col-lg-3">
-        <div class="shadow-lg menu-item-card p-3 mb-3">
-          <img src=${img} class="menu-item-image w-100" />
-          <h1 class="product-card-title">${productName}</h1>
-          <div class="d-flex flex-row justify-content-between">
-              <h1 class="item-price"> ₹ ${price}</h1>
-              <div class="add-cart-buttons">
-                    <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
-                    <div id=${id} class="quantity">${search.item === undefined ? 0 : search.item}</div>
-                    <i onclick="increment(${id})" class="bi bi-plus-lg"></i>
-              </div>
-          </div>
-        </div>
-    </div>
+            <div id=product-id-${id} class="col-12 col-md-6 col-lg-3">
+                <div class="shadow-lg menu-item-card p-3 mb-3">
+                <img src=${img} class="menu-item-image w-100" />
+                <h1 class="product-card-title">${productName}</h1>
+                <div class="d-flex flex-row justify-content-between">
+                    <h1 class="item-price"> ₹ ${price}</h1>
+                    <div class="add-cart-buttons">
+                            <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
+                            <div id=${id} class="quantity">${search.item === undefined ? 0 : search.item}</div>
+                            <i onclick="increment(${id})" class="bi bi-plus-lg"></i>
+                    </div>
+                </div>
+                </div>
+            </div>
     `;
         }).join(""));
 };
