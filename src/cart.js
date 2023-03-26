@@ -1,5 +1,5 @@
 let label = document.getElementById("label");
-let ShoppingCart = document.getElementById("shopping-cart")
+let ShoppingCart = document.getElementById("shopping-cart");
 
 let mybasket = JSON.parse(localStorage.getItem("data")) || [];
 
@@ -39,11 +39,14 @@ let generateCartItems = () => {
     }).join(""))
   }
   else {
-    ShoppingCart.innerHTML = ``
+    ShoppingCart.innerHTML = `
+    <div>
+      <h2>Cart is Empty</h2>
+    </div>
+    `;
     label.innerHTML = `
         <div class="container">
-          <div class="d-flex flex-column">
-          <h2>Cart is Empty</h2>
+          <div class="d-flex flex-column justify-content-center">
           <a href="index.html"> 
               <button class="btn btn-secondary">Back to Home Page</button>
           </a>
