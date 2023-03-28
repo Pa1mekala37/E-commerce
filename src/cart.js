@@ -143,7 +143,7 @@ let TotalAmount = () => {
           <p class="cart-amount"> ₹ ${amount+99}.00/-</p>
         </div>
         <div>
-          <button class="btn btn-primary mt-3">Proceed to Buy</button>
+          <button onclick="orderPlaced()" class="btn btn-primary mt-3">Proceed to Buy</button>
           <button onclick="clearCart()" class="btn btn-danger mt-3" >Clear Cart</button>
         </div>
         
@@ -155,7 +155,13 @@ let TotalAmount = () => {
 TotalAmount();
 
 
-
+let orderPlaced = () => {  
+  alert ("Order Placed Successfully");  
+  mybasket = [];
+  generateCartItems();
+  totalCartQuantity();
+  localStorage.setItem("data", JSON.stringify(mybasket));
+};  
 
 let clearCart = () => {
   mybasket = [];
