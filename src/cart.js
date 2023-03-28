@@ -143,10 +143,25 @@ let TotalAmount = () => {
           <p class="cart-amount"> ₹ ${amount+99}.00/-</p>
         </div>
         <div>
-          <button onclick="orderPlaced()" class="btn btn-primary mt-3">Proceed to Buy</button>
+          <button onclick="orderPlaced()" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Proceed to Buy</button>
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Order Placed Successfully <i class="bi bi-check-circle-fill"></i></h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p> Order Placed Successfully You will receive a Mail with your Order-ID along with Shippment Tracking Details </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
           <button onclick="clearCart()" class="btn btn-danger mt-3" >Clear Cart</button>
         </div>
-        
       </div>
       `);
   } else return;
@@ -156,7 +171,6 @@ TotalAmount();
 
 
 let orderPlaced = () => {  
-  alert ("Order Placed Successfully");  
   mybasket = [];
   generateCartItems();
   totalCartQuantity();
